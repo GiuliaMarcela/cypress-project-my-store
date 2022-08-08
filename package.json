@@ -1,6 +1,13 @@
 {
-  "name": "cypress-project-my-store",
-  "version": "1.0.0",
-  "main": "index.js",
-  "license": "MIT"
+	"name": "cypress-project-my-store",
+	"version": "1.0.0",
+	"main": "index.js",
+	"license": "MIT",
+	"scripts": {
+		"cy:open": "cypress open",
+		"cy:browser": "cypress run --browser"
+	},
+	"devDependencies": {
+		"cypress": "^10.4.0"
+	}
 }
