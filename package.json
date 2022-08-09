@@ -5,7 +5,8 @@
 	"license": "MIT",
 	"scripts": {
 		"cy:open": "cypress open",
-		"cy:browser": "cypress run --browser"
+		"cy:browser": "cypress run --browser",
+		"test": "cypress run"
 	},
 	"devDependencies": {
 		"cypress": "^10.4.0"
