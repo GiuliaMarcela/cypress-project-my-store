@@ -6,9 +6,11 @@
 	"scripts": {
 		"cy:open": "cypress open",
 		"cy:browser": "cypress run --browser",
-		"test": "cypress run"
+		"test": "cypress run",
+		"format": "prettier --write ."
 	},
 	"devDependencies": {
-		"cypress": "^10.4.0"
+		"cypress": "^10.4.0",
+		"prettier": "^2.7.1"
 	}
 }
