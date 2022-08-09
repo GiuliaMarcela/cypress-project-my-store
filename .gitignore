@@ -8,3 +8,4 @@ reports/
 ### Files ###
 yarn.lock
 package-lock.json
+cypress.env.json
