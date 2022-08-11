@@ -20,6 +20,7 @@ Repository created with the purpose to storing the project used during the train
 - eslint
 - cypress-real-events
 - @faker-js/faker
+- cypress-mochawesome-reporter
 
 ## Pre-requirements
 
