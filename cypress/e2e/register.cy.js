@@ -25,7 +25,8 @@ describe('Register', () => {
     cy.xpath(registerPage.emailAddressField)
       .should('be.visible')
       .and('have.attr', 'data-validate', 'isEmail')
-      .type(Cypress.env('email'))
+      .type(randomUser.email)
+      .and('have.value', randomUser.email)
   })
 
   it('should click on create an account button', () => {
@@ -69,19 +70,18 @@ describe('Register', () => {
       .should('be.visible')
       .and('have.id', 'email')
       .and('have.attr', 'data-validate', 'isEmail')
-      .and('have.value', Cypress.env('email'))
+      .and('have.value', randomUser.email)
 
     cy.xpath(registerPage.personal.passwordField)
       .should('be.visible')
       .and('have.attr', 'type', 'password')
       .and('have.id', 'passwd')
-      .type(Cypress.env('password'), { log: false })
+      .type(Cypress.env('password'), { sensitive: true })
       .and('be.visible')
-
-    cy.log(
-      'data',
-      `${randomUser.dayOfBirth}-${randomUser.monthOfBirth}-${randomUser.yearOfBirth}`
-    )
+      .invoke('val')
+      .should((value) =>
+        expect(value.length).to.be.eq(Cypress.env('password').length)
+      )
 
     cy.xpath(registerPage.personal.dayOfBirthField)
       .should('be.hidden')

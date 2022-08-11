@@ -16,7 +16,7 @@ describe('Buy 3 products', () => {
     const products = [
       home.firstProductCard,
       home.secondProductCard,
-      home.thirdProductCard
+      home.seventhProductCard
     ]
 
     products.forEach((product, index) => {
