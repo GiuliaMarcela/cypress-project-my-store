@@ -8,9 +8,9 @@ Repository created with the purpose to storing the project used during the train
 
 ### Challenge goals
 
-- [ ] Register in website
-- [ ] Buy 3 products
-- [ ] Change product quantity in shopping car.
+- [x] Register in website
+- [x] Buy 3 products
+- [x] Change product quantity in shopping car.
 
 ## Dependencies used
 
@@ -18,6 +18,8 @@ Repository created with the purpose to storing the project used during the train
 - cypress-xpath
 - prettier
 - eslint
+- cypress-real-events
+- @faker-js/faker
 
 ## Pre-requirements
 
