@@ -8,6 +8,7 @@ const createRandomUser = () => {
   return {
     firstName: faker.name.firstName(),
     lastName: faker.name.lastName(),
+    email: faker.internet.email(),
     dayOfBirth: day,
     monthOfBirth: month,
     yearOfBirth: year,
@@ -16,9 +17,8 @@ const createRandomUser = () => {
     addressLine2: faker.address.secondaryAddress(),
     city: faker.address.city(),
     state: faker.address.state(),
-    zipCode: faker.address.zipCodeByState(),
-    country: faker.address.country(),
-    phoneNumber: faker.phone.number(),
+    zipCode: faker.address.zipCode('#####'),
+    phoneNumber: faker.phone.number('###-###-####'),
     addressAlias: faker.address.cityName(),
     additionalInformation: faker.hacker.phrase()
   }
