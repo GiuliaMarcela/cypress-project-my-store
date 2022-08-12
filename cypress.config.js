@@ -1,9 +1,11 @@
 const { defineConfig } = require('cypress')
 
 module.exports = defineConfig({
+  fixturesFolder: false,
   video: true,
   videoUploadOnPasses: true,
   reporter: 'cypress-mochawesome-reporter',
+  trashAssetsBeforeRuns: true,
   reporterOptions: {
     charts: false,
     reportPageTitle: 'automation-practice-report',
@@ -13,7 +15,6 @@ module.exports = defineConfig({
     quiet: true,
     timestamp: 'dd-mmm-yyyy-HH-MM-ss'
   },
-  trashAssetsBeforeRuns: true,
   e2e: {
     setupNodeEvents (on, config) {
       require('cypress-mochawesome-reporter/plugin')(on)
@@ -21,5 +22,9 @@ module.exports = defineConfig({
       return config
     },
     baseUrl: 'http://automationpractice.com/'
+  },
+  env: {
+    grepFilterSpecs: true,
+    grepOmitFiltered: true
   }
 })

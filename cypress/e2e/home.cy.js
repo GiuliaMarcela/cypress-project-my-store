@@ -1,6 +1,6 @@
 import { HOME_ELEMENTS as homepage } from './elements'
 
-describe('Home', () => {
+describe('Home', { tags: '@home' }, () => {
   beforeEach(() => {
     cy.clearCookies()
     cy.intercept('GET', '/index.php').as('loading')

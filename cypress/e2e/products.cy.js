@@ -1,6 +1,6 @@
 import { HOME_ELEMENTS as home } from './elements'
 
-describe('Buy 3 products', () => {
+describe('Buy 3 products', { tags: '@products' }, () => {
   beforeEach(() => {
     cy.viewport(1920, 1080)
     cy.clearCookies()

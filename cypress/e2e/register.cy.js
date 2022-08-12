@@ -1,7 +1,7 @@
 import { randomUser } from '../utils/get-user'
 import { REGISTER_ELEMENTS as registerPage } from './elements'
 
-describe('Register', () => {
+describe('Register', { tags: '@register' }, () => {
   beforeEach(() => {
     cy.clearCookies()
     cy.intercept('GET', '/index.php').as('loading')

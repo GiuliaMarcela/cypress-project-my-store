@@ -1,6 +1,6 @@
 import { LOGIN_ELEMENTS, REGISTER_ELEMENTS } from './elements'
 
-describe('Login', () => {
+describe('Login', { tags: '@login' }, () => {
   beforeEach(() => {
     cy.clearCookies()
     cy.intercept('GET', '/index.php').as('loading')
