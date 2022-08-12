@@ -1,0 +1,12 @@
+### Folders ###
+.vscode/
+node_modules/
+fixtures/
+videos/
+screenshots/
+reports/
+assets/
+
+### Files ###
+package.json
+yarn.lock
