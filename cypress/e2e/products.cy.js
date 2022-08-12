@@ -1,4 +1,3 @@
-/// <reference types="cypress-xpath" />
 import { HOME_ELEMENTS as home } from './elements'
 
 describe('Buy 3 products', () => {
@@ -31,7 +30,6 @@ describe('Buy 3 products', () => {
         .should('contain', 'Add to cart')
         .click(100, 350)
 
-      // FIXME: Find one way to remove this wait.
       cy.xpath(home.modalProduct, { timeout: 10000 })
         .should('be.visible')
         .and('contain.text', 'Product successfully added to your shopping cart')

@@ -29,5 +29,6 @@ export const REGISTER_ELEMENTS = {
     mobilePhoneField: '//input[@id="phone_mobile"]',
     addressAliasField: '//input[@id="alias"]'
   },
-  registerCompleteButton: '//button[@id="submitAccount"]'
+  registerCompleteButton: '//button[@id="submitAccount"]',
+  viewMyCustomerAccountTitle: '//a[@title="View my customer account"]'
 }

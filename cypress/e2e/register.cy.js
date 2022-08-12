@@ -178,7 +178,7 @@ describe('Register', () => {
   })
 
   it('should validate that the registration was completed successfully', () => {
-    cy.xpath('//a[@title="View my customer account"]')
+    cy.xpath(registerPage.viewMyCustomerAccountTitle)
       .children()
       .should('contain', `${randomUser.firstName} ${randomUser.lastName}`)
   })
