@@ -5,6 +5,7 @@ fixtures/
 videos/
 screenshots/
 reports/
+assets/
 
 ### Files ###
 package.json
