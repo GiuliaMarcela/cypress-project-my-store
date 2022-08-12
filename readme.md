@@ -67,3 +67,32 @@ Or, run `npm run cy:open` to open Cypress in interactive mode.
 ![Image of the interface of interactive mode looks like](./assets/interactive-mode.png)
 
 ![Image of the interface of interactive mode showing what the test results looks like](./assets/test-result-interactive.png)
+
+### Using cypress-grep
+
+You can also run a specific suite test using tags.
+
+![Image of command line showing the test results using cypress-grep looks like](./assets/test-results-headless-cypress-grep.png)
+
+Example:
+
+```bash
+# run test with tag '@login'
+npx cypress run --env grepTags=@login
+```
+
+You can skip running the tests with specific tag, using the not option: prefix the tag with `-`.
+
+```bash
+npx cypress run --env grepTags=-@login
+```
+
+You can repeat (burn) the filtered tests to make sure they are flake-free
+
+```bash
+npx cypress run --env grepTags=@login,burn=5
+```
+
+You can pass the number of times to run the tests via environment name burn or grepBurn or grep-burn.
+
+If you do not specify the "grep" or "grep tags" option, the "burn" will repeat every test.
